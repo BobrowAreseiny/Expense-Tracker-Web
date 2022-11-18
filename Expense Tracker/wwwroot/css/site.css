@@ -15,4 +15,10 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #12161b;
+  color: white;
+}
+
+.e-bigger {
+    font-size: x-large;
 }
