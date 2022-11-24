@@ -1,7 +1,7 @@
 ﻿@model Expense_Tracker.Models.Category
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new category" : "Edit category";
 }
 
 <div class="row">
@@ -12,8 +12,8 @@
                 <input type="hidden" name="CategoryId" value="@Model.CategoryId" />
                 <div class="mb-3">
                     <div class='e-btn-group costom-rbt-group'>
-                        <input type="radio" id="radioleft" name="Type" value="Expence" checked="@(Model.Type == "Expence")" />
-                        <label class="e-btn" for="radioleft">Expence</label>
+                        <input type="radio" id="radioleft" name="Type" value="Expence" checked="@(Model.Type == "Expense")" />
+                        <label class="e-btn" for="radioleft">Expense</label>
                         <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type == "Income")" />
                         <label class="e-btn" for="radiomiddle">Income</label>
                     </div>
