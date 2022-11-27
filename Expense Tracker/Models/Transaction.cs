@@ -18,5 +18,21 @@ namespace Expense_Tracker.Models
 
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
+
+        public string? CategoryTitleWithIcon
+        {
+            get
+            {
+                return Category?.Title + " " + Category?.Icon ?? string.Empty;
+            }
+        }
+
+        public string? FormattedrAmount
+        {
+            get
+            {
+                return ((Category == null || Category.Type == "Expense") ? "- " :"+ ") + Amount.ToString("C0");
+            }
+        }
     }
 }
