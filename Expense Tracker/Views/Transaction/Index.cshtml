@@ -12,8 +12,8 @@
             <e-grid-searchsettings pageSize="5"></e-grid-searchsettings>
             <e-grid-columns>
                 <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
-                <e-grid-column headerText="Date" field="Date" width="110px"></e-grid-column>
-                <e-grid-column headerText="Amount" field="FormattedrAmount" width="110px"></e-grid-column>
+                <e-grid-column headerText="Date" field="Date" width="110px" format="MMM-dd-yy" type="date" textAlign="Left"></e-grid-column>
+                <e-grid-column headerText="Amount" field="FormattedrAmount" width="110px" textAlign="Right"></e-grid-column>
                 <e-grid-column headerText="Actions" width="100px" template="#actionColumnTemplate"></e-grid-column>
             </e-grid-columns>
         </ejs-grid>
@@ -24,3 +24,18 @@
         </div>
     </div>
 </div>
+
+<script id="actionColumnTemplate" type="text/x-template">
+    <div class="d-flex flex-row justify-content-start">
+         <a class="btn btn-sm no-a-decoration" href="/Transaction/AddOrEdit/${TransactionId}">
+            <i class="fa-solid fa-pen fa-lg"></i>
+        </a>
+        <form action="/Transaction/Delete/${TransactionId}" method="post">
+    @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-sm btm-link no-a-decoration"
+              onclick="return confirm(&quot;Are youshure autofocus delete this record?&quot;)">
+               <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
+            </button>
+        </form>
+    </div>
+</script>

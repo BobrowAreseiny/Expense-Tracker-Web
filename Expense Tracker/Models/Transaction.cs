@@ -9,13 +9,15 @@ namespace Expense_Tracker.Models
         [Key]
         public int TransactionId { get; set; }
 
-        [Column(TypeName = "nvarchar(30)")]
+        [Column(TypeName = "nvarchar(70)")]
         public string? Note { get; set; }
 
         public DateTime Date { get; set; } = DateTime.Now;
 
+        [Range(1, int.MaxValue, ErrorMessage = "Amount should be greater then 0.")]
         public int Amount { get; set; }
 
+        [Range(1, int.MaxValue,ErrorMessage = "Please select a category.")]    
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
 
