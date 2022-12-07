@@ -99,3 +99,11 @@ e-grid {
     border-radius: 1rem;
     background-color: #1a222b;
 }
+
+/*sidebar*/
+
+#sidebar{
+    background-color:#12161d;
+    border-right: 1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+}
