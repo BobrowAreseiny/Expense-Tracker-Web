@@ -11,8 +11,126 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  font-family: "Inter"
+}
+
+*:not(.fa-solid):not(.fa):not(.e-icons) {
+    font-family: "Inter";
 }
 
 body {
   margin-bottom: 60px;
+  background-color: #12161b;
+  color: white;
 }
+
+/*BreadCrumb*/
+.e-breadcrumb a, .e-breadcrumb a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+
+/*Button*/
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/*HyperLink*/
+
+.no-a-decoration, .no-a-decoration:hover {
+    text-decoration:none;
+    color:inherit;
+}
+
+/*Grid*/
+e-grid {
+    border: 0;
+    border-radius: 5px;
+}
+
+.e-grid .e-gridcontent, .e-grid .e-table {
+    background-color: #1a222b;
+}
+
+.e-grid .e-gridheader {
+    border: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    background-color: #222b33;
+}
+
+.e-grid .e-gridheader .e-headercell {
+
+}
+
+.main-content {
+    margin-left: 290px
+}
+
+.e-bigger {
+    font-size: x-large;
+}
+
+.e-btn-group.costom-rbt-group {
+    width: 100%;
+}
+
+.e-btn-group.costom-rbt-group .e-btn {
+    width: 50%;
+}
+
+.costom-rbt-group label.e-btn {
+    box-shadow: none !important;
+    border: 1px solid #fff;
+    background-color: rgb(34 43 51);
+    color: #fff;
+}
+
+.e-btn-group.costom-rbt-group input:checked + label.e-btn {
+    background-color: #fff;
+    color: #212b36;
+    border: 1px solid #fff;
+}
+
+/*sidebar*/
+#sidebar{
+    background-color:#12161d;
+    border-right: 1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+}
+
+
+.widget {
+    border-radius: 1rem;
+    background-color: #1a222b;
+}
+
+    .widget.summary > div:first-child {
+        background-color: #222b33;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+        .widget.summary > div:first-child i {
+            font-weight: bold;
+        }
+
+    .widget.income > div:first-child {
+       color: #65da41;
+    }  
+
+    .widget.expense > div:first-child {
+       color: #ff4e48;
+    }
+
+    .widget.balance > div:first-child {
+        color: #2aa1ff;
+    }
+
+    .widget.chart {
+        padding: 5px;
+    }
